@@ -1,1 +1,6 @@
-body{background: url(../inc/pattern.svg);}
+body{background: url(../inc/pattern.svg); font-family: "Montserrat", Sans-serif; color:#000539;}
+.line-height{line-height: 1.4}
+.card{background: #FFFFFF; border: 5px solid #000539;}
+.card a{font-weight: bold; color:#000539; text-decoration: none; border-bottom:2px solid #FED22A;}
+.huge{font-size:78px;}
+.pullup{position: relative; top:-2rem;}
