@@ -6,8 +6,17 @@ body{background: url(../inc/pattern.png); background-size:800px; font-family: "M
 .card a.no-line{border: none;}
 .huge{font-size:78px;}
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .under{z-index: 2; position: relative;}
 .over{z-index: 5; position: relative;}
+
+input, textarea{font-size:16px; width:100%; box-sizing:border-box; padding:10px 15px; border: 5px solid #000539;}
 
 
 @media screen and (min-width:40em){
@@ -16,6 +25,7 @@ body{background: url(../inc/pattern.png); background-size:800px; font-family: "M
 .pullup-most{position: relative; top:-6rem;}
 
 .card:hover{-webkit-transform:scale(1.05) rotate(2deg);}
+.no-hover:hover{-webkit-transform:none;}
 }
 
 @media screen and (max-width:40em){
