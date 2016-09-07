@@ -1,6 +1,24 @@
-body{background: url(../inc/pattern.svg); font-family: "Montserrat", Sans-serif; color:#000539;}
+body{background: url(../inc/pattern.png); background-size:800px; font-family: "Montserrat", Sans-serif; color:#000539;}
 .line-height{line-height: 1.4}
-.card{background: #FFFFFF; border: 5px solid #000539;}
+.card{background: #FFFFFF; border: 5px solid #000539; transition:.3s ease all;}
 .card a{font-weight: bold; color:#000539; text-decoration: none; border-bottom:2px solid #FED22A;}
+.card a:hover{color:#FED22A;}
+.card a.no-line{border: none;}
 .huge{font-size:78px;}
+
+.under{z-index: 2; position: relative;}
+.over{z-index: 5; position: relative;}
+
+
+@media screen and (min-width:40em){
 .pullup{position: relative; top:-2rem;}
+.pullup-more{position: relative; top:-4rem;}
+.pullup-most{position: relative; top:-6rem;}
+
+.card:hover{-webkit-transform:scale(1.05) rotate(2deg);}
+}
+
+@media screen and (max-width:40em){
+	.clearfix{padding:1rem;}
+	.card.px3,.card.px4{padding-left:2rem;padding-right:2rem;}
+}
