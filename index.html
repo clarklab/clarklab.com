@@ -14,22 +14,6 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
-
-	<script>
-	$(document).ready(function() {
-	var movementStrength = 25;
-	var height = movementStrength / $(window).height();
-	var width = movementStrength / $(window).width();
-	$("html").mousemove(function(e){
-	          var pageX = e.pageX - ($(window).width() / 2);
-	          var pageY = e.pageY - ($(window).height() / 2);
-	          var newvalueX = width * pageX * -1 - 25;
-	          var newvalueY = height * pageY * -1 - 25;
-	          $('body').css("background-position", newvalueX+"px     "+newvalueY+"px");
-	});
-	});
-	</script>
 </head>
 
 <body>
@@ -119,4 +103,22 @@
 	</div>
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+
+<script>
+	$(document).ready(function() {
+	var movementStrength = 25;
+	var height = movementStrength / $(window).height();
+	var width = movementStrength / $(window).width();
+	$("html").mousemove(function(e){
+	          var pageX = e.pageX - ($(window).width() / 2);
+	          var pageY = e.pageY - ($(window).height() / 2);
+	          var newvalueX = width * pageX * -1 - 25;
+	          var newvalueY = height * pageY * -1 - 25;
+	          $('body').css("background-position", newvalueX+"px     "+newvalueY+"px");
+	});
+	});
+	</script>
+
 </html>
