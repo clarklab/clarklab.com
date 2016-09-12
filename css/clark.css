@@ -6,21 +6,12 @@ body{background: url(../inc/pattern.png); background-size:800px; font-family: "M
 .card a.no-line{border: none;}
 .huge{font-size:78px;}
 
-.card.inverse{background: #000539; color:#fff;}
-.card.inverse a{color:#fff; border-color:#fff;}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
+input:focus, select:focus, textarea:focus, button:focus {outline: none;}
 
 .under{z-index: 2; position: relative;}
 .over{z-index: 5; position: relative;}
 
 input, textarea{font-size:16px; width:100%; box-sizing:border-box; padding:10px 15px; border: 5px solid #000539;}
-
 
 @media screen and (min-width:40em){
 .pullup{position: relative; top:-2rem;}
