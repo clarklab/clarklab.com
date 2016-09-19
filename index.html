@@ -24,6 +24,7 @@
 </head>
 
 <body>
+	<div id="log"></div>
 	<div class="py2 xs-hide"></div>
 
 	<div class="clearfix max-width-3 mx-auto center mt4">
@@ -120,9 +121,15 @@ var mouseY = 0;
 function mousePos (e) {
   mouseX = (e.pageX * -1 / 15); 
   mouseY = (e.pageY * -1 / 15);
-  document.body.style.backgroundPosition = mouseX + 'px ' + mouseY + 'px';;
+  document.body.style.backgroundPosition = mouseX + 'px ' + mouseY + 'px';
   return true;
 }
+function tilt(evt) {
+	document.body.style.backgroundPosition = evt.gamma + 'px ' + evt.beta + 'px';
+}
+
+window.addEventListener("deviceorientation", tilt);
+
 </script>
 
 </html>
