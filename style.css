@@ -20,7 +20,7 @@ a.green:hover{background: #00FFAF; color:#fff;}
 .social a{margin-right:1rem;}
 .up{z-index: 10}
 
-#canvas-container{width:100%; position: absolute; bottom:0; left:0; right:0; top:0; }
+#canvas-container{width:100%; position: absolute; bottom:0; left:0; right:0; top:0;  z-index: -1}
 #canvas-container canvas{max-width: 100%;}
 
 .contact{display: none;}
@@ -42,6 +42,7 @@ input[type="submit"]:hover{-webkit-transform:rotate(4deg) scale(1.2);}
 	.h2{font-size:2.5rem; line-height: 1.3;}
 	.lpr2{padding-right:1rem;}
 
+	#canvas-container{z-index: 1;}
 	.contact{-webkit-transform:rotate(-90deg); width:130px; text-align: center; display: block; position: absolute; background: #E3E6F8; padding:.5rem 0 1rem 0; top:180px; right:-45px; transition:.15s ease all;}
 	.contact:hover{right:-40px; background:#0301CC; color:#fff;}
 	.contact:after{display: none;}
