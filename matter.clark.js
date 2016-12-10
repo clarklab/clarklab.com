@@ -13,6 +13,9 @@ canvasContainer = document.getElementById('canvas-container');
 var canvasWidth = (document.getElementById('canvas-container').offsetWidth - 16);
 var canvasHeight = document.getElementById('canvas-container').offsetHeight;
 
+var screenWidth = window.innerWidth;
+var sceneHeight = 690;
+if(screenWidth < 640) {var sceneHeight = 800};
 
 // create an engine
 var engine = Engine.create(canvasContainer, {
@@ -20,7 +23,7 @@ var engine = Engine.create(canvasContainer, {
     options: {
       wireframes: false,
       showAngleIndicator: false,
-      height: 690,
+      height: sceneHeight,
       width: 690,
       background: "transparent"
     }
@@ -33,6 +36,35 @@ mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
 mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
 
 World.add(engine.world, mouseConstraint);
+    
+Matter.updateGravity = function(event) {
+
+var orientation = window.orientation,
+    gravity = engine.world.gravity;
+
+if (orientation === 0) {
+    gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
+    gravity.y = Common.clamp(event.beta, -90, 90) / 90;
+} else if (orientation === 180) {
+    gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
+    gravity.y = Common.clamp(-event.beta, -90, 90) / 90;
+} else if (orientation === 90) {
+    gravity.x = Common.clamp(event.beta, -90, 90) / 90;
+    gravity.y = Common.clamp(-event.gamma, -90, 90) / 90;
+} else if (orientation === -90) {
+    gravity.x = Common.clamp(-event.beta, -90, 90) / 90;
+    gravity.y = Common.clamp(event.gamma, -90, 90) / 90;
+}
+};
+
+window.addEventListener('deviceorientation', function(event) {
+            _deviceOrientationEvent = event;
+            Matter.updateGravity(event);
+        }, true);
+
+window.addEventListener('orientationchange', function() {
+            Matter.updateGravity(_deviceOrientationEvent);
+        }, false);
 
 // create two boxes and a ground
 var rightTriangleA = Vertices.fromPath('0 200 200 200 0 0');
@@ -81,7 +113,11 @@ var triangleC = Bodies.fromVertices(560, 207, rightTriangleC, {
                 }
             });
 
-var ground = Bodies.rectangle(400, 600, 800, 10, {
+var screenWidth = window.innerWidth;
+var groundY = 580;
+if(screenWidth < 640) {var groundY = 800};
+
+var ground = Bodies.rectangle(400, groundY, 800, 10, {
 	isStatic: true, render: {
                     fillStyle: 'transparent',
                     strokeStyle: 'transparent'
@@ -110,8 +146,12 @@ Engine.run(engine);
 function mover(){
     var el = document.getElementById('contact');
     var screenWidth = window.innerWidth;
-    if(screenWidth < 640) {document.getElementById('aside').appendChild(el);}
-    if(screenWidth > 640) {document.getElementById('main').appendChild(el);}
+    if(screenWidth < 640) {
+        document.getElementById('aside').appendChild(el);
+    }
+    if(screenWidth > 640) {
+        document.getElementById('main').appendChild(el);
+    }
 };
 
 mover();
