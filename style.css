@@ -14,6 +14,9 @@ a:hover{color:#fff;}
 a:hover:before{height: 100%; width:auto; left:-5px; right:-5px;}
 *:focus {outline: none;}
 
+a.green:before{display: none;}
+a.green:hover{background: #00FFAF; color:#fff;}
+
 .social a{margin-right:1rem;}
 .up{z-index: 10}
 
