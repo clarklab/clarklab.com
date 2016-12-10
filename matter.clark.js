@@ -71,42 +71,42 @@ var rightTriangleA = Vertices.fromPath('0 200 200 200 0 0');
 var rightTriangleB = Vertices.fromPath('90 90 0 90 90 0');
 var rightTriangleC = Vertices.fromPath('120 120 0 120 120 0');
 
-var rectangleA = Bodies.rectangle(540, 307, 120, 120, {
+var rectangleA = Bodies.rectangle(570, 307, 120, 120, {
 	isStatic: false, render:{
 		fillStyle: '#E3E6F8',
 		strokeStyle: 'transparent'
 	}
 });
 
-var rectangleB = Bodies.rectangle(520, 93, 110, 110, {
+var rectangleB = Bodies.rectangle(550, 93, 110, 110, {
 	isStatic: false, render:{
 		fillStyle: '#00FFAF',
 		strokeStyle: 'transparent'
 	}
 });
 
-var circleA = Bodies.circle(400, 210, 87.5, {
+var circleA = Bodies.circle(430, 210, 87.5, {
 	isStatic: false, render:{
 		fillStyle: '#1210DF',
 		strokeStyle: 'transparent'
 	}
 });
 
-var triangleA = Bodies.fromVertices(300, 300, rightTriangleA, {
+var triangleA = Bodies.fromVertices(330, 300, rightTriangleA, {
                 isStatic: false, render: {
                     fillStyle: '#00FFAF',
                     strokeStyle: 'transparent'
                 }
             });
 
-var triangleB = Bodies.fromVertices(294, 134, rightTriangleB, {
+var triangleB = Bodies.fromVertices(324, 134, rightTriangleB, {
                 isStatic: false, render: {
                     fillStyle: '#E3E6F8',
                     strokeStyle: 'transparent'
                 }
             });
 
-var triangleC = Bodies.fromVertices(560, 207, rightTriangleC, {
+var triangleC = Bodies.fromVertices(590, 207, rightTriangleC, {
                 isStatic: false, render: {
                     fillStyle: '#FF0068',
                     strokeStyle: 'transparent'
