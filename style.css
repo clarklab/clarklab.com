@@ -1,0 +1,45 @@
+body{font-family: Poppins; color:#0301CC;}
+
+.cousine{font-family: Cousine;}
+
+.purple{color:#0301CC;}
+.light{color:#9796F2;}
+.gray{color:#E3E6F8;}
+.green{color:#00FFAF;}
+.pink{color:#FF0068;}
+
+a{color:#0301CC; text-decoration: none; position: relative; display: inline-block; z-index: 10}
+a:before{content:" "; display: block; position: absolute; width:100%; height:2px; background:#0301CC; bottom:0; z-index: -1}
+a:hover{color:#fff;}
+a:hover:before{height: 100%; width:auto; left:-5px; right:-5px;}
+*:focus {outline: none;}
+
+.social a{margin-right:1rem;}
+.up{z-index: 10}
+
+#canvas-container{width:100%; position: absolute; bottom:0; left:0; right:0; top:0; }
+#canvas-container canvas{max-width: 100%;}
+
+.contact{display: none;}
+
+input, textarea{display: block; width:100%; box-sizing:border-box; font-family: Poppins; border:0; border-bottom:3px solid #0301CC; font-size: 1rem; padding:.25rem 0;}
+input[type="submit"]{background: #00FFAF; color:#fff; border:0; width:90px; height: 90px;  border-radius: 100px; -webkit-transform:rotate(-9deg); font-size: 1.25rem; position: relative; transition:.15s ease all; top:0;}
+input[type="submit"]:hover{-webkit-transform:rotate(4deg) scale(1.2);}
+
+::-webkit-input-placeholder {color: #0301CC;}
+:-ms-input-placeholder {color: #0301CC;}
+::-moz-placeholder {color: #0301CC; opacity: 1;}
+:-moz-placeholder {color: #0301CC; opacity: 1;}
+
+.h1.mt4{margin-top:4rem; margin-bottom: 12rem;}
+
+@media screen and (min-width: 640px){
+	.h1{font-size:3.5rem; line-height: 1.3; font-weight: 500;}
+	.h1.mt4{margin-top: 8rem; margin-bottom: 8rem;}
+	.h2{font-size:2.5rem; line-height: 1.3;}
+	.lpr2{padding-right:1rem;}
+
+	.contact{-webkit-transform:rotate(-90deg); width:130px; text-align: center; display: block; position: absolute; background: #E3E6F8; padding:.5rem 0 1rem 0; top:180px; right:-45px; transition:.15s ease all;}
+	.contact:hover{right:-40px; background:#0301CC; color:#fff;}
+	.contact:after{display: none;}
+}
