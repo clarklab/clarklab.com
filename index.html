@@ -43,7 +43,10 @@
 			</div>
 			<section id="contact" class="form max-width-2 pt2 mb5">
 				<p class="h2">I’m always available for an interesting gig. Give me a shout.</p>
-				<form method="POST" netlify>
+				<form method="POST" netlify netlify-honeypot="bot-field">
+			    <p class="hide">
+			      <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+			    </p>
 			    <input placeholder="Name" type="text" name="name" class="mb2">
 			    <input placeholder="Email" type="email" name="_replyto" class="mb2">
 			    <textarea placeholder="Message" name="Message" rows="2" class="mb2"></textarea>
@@ -76,8 +79,6 @@
 					<a href="http://homeahead.com">HomeAhead</a></li>
 				<li class="mb3">A new website for</br>
 					<a href="http://clearhead.me">ClearHead</a></li>
-				<li class="mb3">A new website for</br>
-					<a href="http://careerplug.com">CareerPlug</a></li>
 				<li class="mb3">A cloud party game for</br>
 					<a href="https://github.com/clarklab/who-says">Who Says?</a></li>
 				<li class="mb3">Design and build for</br>
@@ -86,7 +87,7 @@
 
 			<p class="cousine">Speaking</p>
 				<p>I travel to talk about design, development, UX, WordPress, and tell bad jokes.</p>
-				<p>Most recently, I talked about designing motion with Sketch at <a href="https://webaquebec.org/classes-de-maitre/svg-animation-starting-from-sketch">Web a Quebec</a> in Quebec City, Canada.</p>
+				<p>Most recently, I talked about designing motion with Sketch at <a href="https://webaquebec.org/">Web a Quebec</a> in Quebec City, Canada.</p>
 				<p class="mb5">If your event needs a speaker, you can find me on <a href="http://twitter.com/clarklab">Twitter</a> or with the contact form on this page.</p>
 
 			<p class="cousine">Writing</p>

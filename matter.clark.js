@@ -154,8 +154,8 @@ function mover(){
     }
 };
 
-mover();
+// mover();
 
 window.addEventListener("resize", function(){
-    mover();
+    // mover();
 });
