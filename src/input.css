@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+    body {
+      
+    }
+
+    section{
+      @apply relative z-10;
+    }
+
+    a strong{
+      @apply text-amber-500 font-bold transition-all duration-300
+    }
+
+    .currently p{
+      
+    }
+
+    .clients a, .intro a, .contact a{
+      @apply transition-all duration-300 underline underline-offset-4 decoration-amber-400 decoration-4
+    }
+
+    a.not-hover {
+      @apply decoration-amber-400/20;
+    }

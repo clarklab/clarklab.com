@@ -1,100 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Clark Wimberly</title>
-	<link href="https://fonts.googleapis.com/css?family=Cousine|Poppins:400,500" rel="stylesheet">
-	<script src="matter.min.js"></script>
-	<link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarklab (The work of Clark Wimberly from Superfun)</title>
 
-	<meta name="theme-color" content="#0301CC">
-	<meta name="msapplication-navbutton-color" content="#00FFAF">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-	
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=00r8lKLl7l">
-	<link rel="icon" type="image/png" href="/favicon-32x32.png?v=00r8lKLl7l" sizes="32x32">
-	<link rel="icon" type="image/png" href="/favicon-16x16.png?v=00r8lKLl7l" sizes="16x16">
-	<link rel="manifest" href="/manifest.json?v=00r8lKLl7l">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg?v=00r8lKLl7l" color="#00ffaf">
-	<link rel="shortcut icon" href="/favicon.ico?v=00r8lKLl7l">
-	<meta name="apple-mobile-web-app-title" content="Clark">
-	<meta name="application-name" content="Clark">
-	<meta name="theme-color" content="#ffffff">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@75..125,200..900&display=swap" rel="stylesheet">
+  
+  <link href="src/output.css" rel="stylesheet">
 </head>
+<body class="p-8 space-y-12 max-w-4xl mx-auto font-sans">
 
-<body id="home">
+  <section class="intro mt-16">
+    <h1 class="text-4xl font-bold mb-4 font-stretch-semi-expanded">Clark is one half of <a href="https://superfun.team">Superfun</a>, a tiny do-anything agency in Austin, TX. He's also a weirdo, bbq snoot, game maker, and a major AI wonk. Here's what he's up to.</h1>
+  </section>
 
-	<div class="clearfix max-width-4 mx-auto pt3 px3">
-		<div id="main" class="sm-col sm-col-8 lpr2">
-			<div class="relative">
-			<p class="cousine h3">Hello! I’m Clark Wimberly. <a class="pink available" href="#contact">I'm available.</a></p>
-			<p class="h1 mt4 max-width-2">I make things that are fun & easy to use.</p>
-			<div id="canvas-container"></div>
-			<p class="mb5 social h3">
-				<a href="http://twitter.com/clarklab">Twitter</a>
-				<a href="http://dribbble.com/clark">Dribbble</a>
-				<a href="http://github.com/clarklab">Github</a>
-			</p>
-			</div>
-			<section id="contact" class="form max-width-2 pt2 mb5">
-				<p class="h2">I’m always available for an interesting gig. Give me a shout.</p>
-				<form method="POST" netlify netlify-honeypot="bot-field">
-			    <p class="hide">
-			      <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-			    </p>
-			    <input placeholder="Name" type="text" name="name" class="mb2">
-			    <input placeholder="Email" type="email" name="_replyto" class="mb2">
-			    <textarea placeholder="Message" name="Message" rows="2" class="mb2"></textarea>
-			    
-			    <div class="clearfix mt3">
-			    	<div class="col col-4"><input type="submit" value="Send"></div>
-			    	<div class="col col-8 right-align mt2">If you are in Austin, TX we should meet for BBQ!</div>
-			    </div>
-			</form>
-			</section>
-		</div>
-		<div id="aside" class="sm-col sm-col-3 h3">
-			<p class="cousine">Design, Development, UX</p>
-			<ul class="list-reset light mb5">
-				<li class="mb3">A scratch .com build for</br>
-					<a href="http://sxsw.com">SXSW</a></li>
-				<li class="mb3">Engineered a new design system for
-					<a href="http://homeaway.com">HomeAway</a></li>
-				<li class="mb3">A new website for</br>
-					<a href="http://flosports.tv">FloSports</a></li>
-				<li class="mb3">A new blog and UX for</br>
-					<a href="http://swappa.com">Swappa</a></li>
-				<li class="mb3">Design & content for</br>
-					<a href="http://invisionapp.com">InVision</a></li>
-				<li class="mb3">UX and development for</br>
-					<a href="http://thezebra.com">The Zebra</a> (a Mark Cuban Co)</li>
-				<li class="mb3">Design and builds for</br>
-					<a href="http://homeahead.com">HomeAhead</a></li>
-				<li class="mb3">A new website for</br>
-					<a href="http://clearhead.me">ClearHead</a></li>
-				<li class="mb3">A cloud party game for</br>
-					<a href="https://github.com/clarklab/who-says">Who Says?</a></li>
-				<li class="mb3">Design and build for</br>
-					<a href="http://chowdown.io/">Chowdown</a></li>
-			</ul>
+  <section class="currently">
+    <h1 class="text-base font-bold mb-4 font-stretch-expanded font-semibold uppercase">Currently Working On</h1>
+    <ul class="space-y-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <li><a class="grid gap-4 grid-cols-2" href="https://familyrecord.app/">
+        <div style="background-image: url(https://familyrecord.app/images/social.png);" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>Family Record</strong> Store and share family recordings</p>
+      </a></li>
+      <li><a class="grid gap-4 grid-cols-2" href="https://chowdown.io">
+        <div style="background-image: url(https://chowdown.io/assets/social.png);" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>Chowdown</strong> Plaintext recipe database for hackers</p>
+      </a></li>
+      <li><a class="grid gap-4 grid-cols-2" href="https://superfun.games">
+        <div style="background-image: url(https://superfun.games/wp-content/themes/superfun-games/images/social.png);" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center border border-gray-400"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>Superfun Games</strong> Card games and puzzles for kids and big kids</p>
+      </a></li>
+      <li><a class="grid gap-4 grid-cols-2" href="https://jaws.superfun.games">
+        <div style="background-image: url(https://jaws.superfun.games/unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>1-bit Jaws</strong> The greatest movie ever, one frame at a time</p>
+      </a></li>
+      <li><a class="grid gap-4 grid-cols-2" href="https://spotify-xm.superfun.games">
+        <div style="background-image: url(https://spotify-xm.superfun.games/unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>SpotifyXM</strong> Listen to Spotify like the radio</p>
+      </a></li>
+      <li><a class="grid gap-4 grid-cols-2" href="https://spukebox.superfun.games">
+        <div style="background-image: url(https://spukebox.superfun.games/unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>Spukebox</strong> A Spotify jukebox for perfect party playlists</p>
+      </a></li>
+      <li><a class="grid gap-4 grid-cols-2" href="https://rewatch.party">
+        <div style="background-image: url(https://rewatch.party/social-unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>Rewatch Party</strong> Like a book club for people who don't read good</p>
+      </a></li>
+      <li><a class="grid gap-4 grid-cols-2" href="https://make.chowdown.io">
+        <div style="background-image: url(https://make.chowdown.io/share-image.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>Chowdown Coverter</strong> Handwritten recipes to clean Markdown</p>
+      </a></li>
+      <li><a class="grid gap-4 grid-cols-2" href="https://qrcodeonashirt.com">
+        <div style="background-image: url(https://qrcodeonashirt.com/social_unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>QR Code on a Shirt</strong> Kinda dumb, exactly what it sounds like</p>
+      </a></li>
+      <li><a class="grid gap-4 grid-cols-2" href="https://clark-simulator-2000.superfun.games/">
+        <div style="background-image: url(https://clark-simulator-2000.superfun.games/assets/social.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <p class="leading-tight"><strong>Clark Simulator 2000</strong> Even dumber than it sounds</p>
+      </a></li>
+    
+    </ul>
+  </section>
 
-			<p class="cousine">Speaking</p>
-				<p>I travel to talk about design, development, UX, WordPress, and tell bad jokes.</p>
-				<p>Most recently, I talked about designing motion with Sketch at <a href="https://webaquebec.org/">Web a Quebec</a> in Quebec City, Canada.</p>
-				<p class="mb5">If your event needs a speaker, you can find me on <a href="http://twitter.com/clarklab">Twitter</a> or with the contact form on this page.</p>
+  <section class="clients">
+    <h1 class="text-base font-bold mb-4 font-stretch-expanded font-semibold uppercase">Clients</h1>
+    <h1 class="text-4xl font-bold mb-4 font-stretch-semi-expanded">Some past gigs include <a href="https://sxsw.com">SXSW</a>, <a href="https://microsoft.com">Microsoft</a>, <a href="https://nasdaq.com">NASDAQ</a>, <a href="https://10up.com">10up</a>, <a href="https://thebaltimorebanner.com">The Baltimore Banner</a>, <a href="https://www.elnuevodia.com/">El Nuevo Dia</a>, <a href="https://aboard.com">Aboard</a>, <a href="https://blockchain.com">Blockchain</a>, <a href="https://www.fuseautotech.com/">Fuse</a>, <a href="https://exploreaustin.org">Explore Austin</a>, <a href="https://www.flosports.tv/">FloSports</a>, <a href="https://snopes.com">Snopes</a>, <a href="https://workhelix.com">WorkHelix</a>, <a href="https://getnugg.com/">Nugg</a> <a href="https://coolhunting.com">COOL HUNTING</a>, <a href="https://invisionapp.com">InVision</a>, and a slew of other nice folks. Who's next?</h1>
+  </section>
 
-			<p class="cousine">Writing</p>
-				<p class="mb5">I wrote a <a href="https://www.invisionapp.com/ecourses/design-workflow-with-sketch">book about Sketch</a>, I contribute to <a href="http://blog.invisionapp.com/author/clark-wimberly/">the InVision blog</a>, and I sometimes write on <a href="https://medium.com/@clarklab">Medium</a>. I write code over <a href="http://github.com/clarklab">at GitHub</a>. I'm also really <a href="http://twitter.com/clarklab">noisy on Twitter</a>.</p>
-		</div>
-		<div class="sm-col sm-col-1"></div>
-	</div>
+  <section class=github">
+    <h1 class="text-base font-bold mb-4 font-stretch-expanded font-semibold uppercase">Keep me honest</h1>
+    <div class="w-full p-3 sm:p-8 rounded-2xl border-4 border-amber-400 bg-white">
+      <a href="https://github.com/clarklab"><img class="w-full" src="http://ghchart.rshah.org/clarklab" alt="clarklab's Github chart" /></a>
+    </div>
+  </section>
 
-<a href="#contact" class="contact">Contact Me</a>
-<script src="matter.clark.js"></script>
+  <section class="contact">
+    <h1 class="text-base font-bold mb-4 font-stretch-expanded font-semibold uppercase">Get in Touch</h1>
+    <p class="text-4xl font-bold mb-4 font-stretch-semi-expanded">You can find me on <a href="https://github.com/clarklab">Github</a>, <a href="https://x.com/clarklab">Twitter</a>, or email me at <a href="mailto:clark@superfun.games">clark@superfun.team</a>.</p>
+  </section>
+
+  <div id="shade" class="fixed inset-0 z-1"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.dots.min.js"></script>
+<script>
+VANTA.DOTS({
+  el: "#shade",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xffb900,
+  color2: 0xffb900,
+  backgroundColor: 0xffffff,
+  showLines: false
+})
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const allLinks = document.querySelectorAll('a');
+
+    allLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        allLinks.forEach(otherLink => {
+          if (otherLink !== link) {
+            otherLink.classList.add('not-hover');
+          }
+        });
+      });
+
+      link.addEventListener('mouseleave', () => {
+        allLinks.forEach(otherLink => {
+          otherLink.classList.remove('not-hover');
+        });
+      });
+    });
+  });
+</script>
+  
 </body>
 </html>
