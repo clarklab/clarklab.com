@@ -90,7 +90,7 @@ a.not-hover {
   @apply decoration-dashed;
 }
 
-.ink .shade{
+.ink #shade{
   @apply hidden
 }
 
