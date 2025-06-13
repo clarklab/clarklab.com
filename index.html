@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clarklab (The work of Clark Wimberly from Superfun)</title>
   <meta property="og:image" content="/unfurl.png">
 
-  <link rel="preconnect" target="_blank" href="https://fonts.googleapis.com">
-  <link rel="preconnect" target="_blank" href="https://fonts.gstatic.com" crossorigin>
-  <link target="_blank" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@75..125,200..900&display=swap" rel="stylesheet">
-  
-  <link target="_blank" href="src/output.css" rel="stylesheet">
-</head>
-<body class="p-8 space-y-12 max-w-4xl mx-auto font-sans">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@75..125,200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@200..900&display=swap" rel="stylesheet">
 
-  <section class="intro mt-16">
+  <!-- Monaspace fonts from Fontsource CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-neon@5.2.5/index.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-argon@5.2.5/index.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-xenon@5.2.5/index.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-radon@5.2.5/index.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-krypton@5.2.5/index.css" rel="stylesheet">
+
+  <link href="src/output.css" rel="stylesheet">
+  
+  <script type="module">
+    import monaspaceFont from 'https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/+esm'
+  </script>
+</head>
+<body class="light p-8 space-y-12 max-w-4xl mx-auto font-sans dark:bg-black ink:bg-gray-300 fun:bg-red-400">
+
+  <section class="intro lead mt-16">
     <h1 class="text-2xl sm:text-4xl leading-tight font-bold mb-4 font-stretch-semi-expanded">Clark is one half of <a target="_blank" href="https://superfun.team">Superfun</a>, a tiny do-anything agency in Austin, TX. He's also a weirdo, bbq snoot, game maker, and a major AI wonk. Here's what he's up to.</h1>
   </section>
 
@@ -22,50 +34,80 @@
     <h1 class="text-base font-bold mb-4 font-stretch-expanded font-semibold uppercase tracking-wider">Currently Working On</h1>
     <ul class="space-y-1 grid grid-cols-1 md:grid-cols-2 gap-4">
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://familyrecord.app/">
-        <div style="background-image: url(https://familyrecord.app/images/social.png);" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative">
+          <img src="https://familyrecord.app/images/social.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Family Record" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>Family Record</strong> Store and share family recordings</p>
       </a></li>
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://chowdown.io">
-        <div style="background-image: url(https://chowdown.io/assets/social.png);" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative">
+          <img src="https://chowdown.io/assets/social.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Chowdown" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>Chowdown</strong> Plaintext recipe database for hackers</p>
       </a></li>
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://superfun.games">
-        <div style="background-image: url(https://superfun.games/wp-content/themes/superfun-games/images/social.png);" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center border border-gray-400"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative border border-gray-400">
+          <img src="https://superfun.games/wp-content/themes/superfun-games/images/social.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Superfun Games" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>Superfun Games</strong> Card games and puzzles for kids and big kids</p>
       </a></li>
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://jaws.superfun.games">
-        <div style="background-image: url(https://jaws.superfun.games/unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative">
+          <img src="https://jaws.superfun.games/unfurl.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="1-bit Jaws" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>1-bit Jaws</strong> The greatest movie ever, one frame at a time</p>
       </a></li>
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://spotify-xm.superfun.games">
-        <div style="background-image: url(https://spotify-xm.superfun.games/unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative">
+          <img src="https://spotify-xm.superfun.games/unfurl.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="SpotifyXM" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>SpotifyXM</strong> Listen to Spotify like the radio</p>
       </a></li>
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://spukebox.superfun.games">
-        <div style="background-image: url(https://spukebox.superfun.games/unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative">
+          <img src="https://spukebox.superfun.games/unfurl.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Spukebox" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>Spukebox</strong> A Spotify jukebox for perfect party playlists</p>
       </a></li>
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://rewatch.party">
-        <div style="background-image: url(https://rewatch.party/social-unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative">
+          <img src="https://rewatch.party/social-unfurl.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Rewatch Party" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>Rewatch Party</strong> Like a book club for people who don't read good</p>
       </a></li>
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://make.chowdown.io">
-        <div style="background-image: url(https://make.chowdown.io/share-image.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative">
+          <img src="https://make.chowdown.io/share-image.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Chowdown Converter" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>Chowdown Coverter</strong> Handwritten recipes to clean Markdown</p>
       </a></li>
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://qrcodeonashirt.com">
-        <div style="background-image: url(https://qrcodeonashirt.com/social_unfurl.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative">
+          <img src="https://qrcodeonashirt.com/social_unfurl.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="QR Code on a Shirt" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>QR Code on a Shirt</strong> Kinda dumb, exactly what it sounds like</p>
       </a></li>
       <li><a class="grid gap-4 grid-cols-2" target="_blank" href="https://clark-simulator-2000.superfun.games/">
-        <div style="background-image: url(https://clark-simulator-2000.superfun.games/assets/social.png)" class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 bg-cover bg-center flex items-center justify-center"><div class="animate-spin -z-1 rounded-full h-8 w-8 border-b-2 border-amber-400"></div></div>
+        <div class="thumb aspect-video w-full bg-black/10 rounded-lg mb-2 flex items-center justify-center relative">
+          <img src="https://clark-simulator-2000.superfun.games/assets/social.png" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Clark Simulator 2000" />
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 z-1 relative"></div>
+        </div>
         <p class="leading-tight"><strong>Clark Simulator 2000</strong> Even dumber than it sounds</p>
       </a></li>
     
     </ul>
   </section>
 
-  <section class="clients">
+  <section class="clients lead">
     <h1 class="text-base font-bold mb-4 font-stretch-expanded font-semibold uppercase tracking-wider">Clients</h1>
     <h1 class="text-2xl sm:text-4xl leading-tight font-bold mb-4 font-stretch-semi-expanded">Some past gigs include <a target="_blank" href="https://sxsw.com">SXSW</a>, <a target="_blank" href="https://microsoft.com">Microsoft</a>, <a target="_blank" href="https://nasdaq.com">NASDAQ</a>, <a target="_blank" href="https://10up.com">10up</a>, <a target="_blank" href="https://thebaltimorebanner.com">The Baltimore Banner</a>, <a target="_blank" href="https://www.elnuevodia.com/">El Nuevo Dia</a>, <a target="_blank" href="https://aboard.com">Aboard</a>, <a target="_blank" href="https://blockchain.com">Blockchain</a>, <a target="_blank" href="https://www.fuseautotech.com/">Fuse</a>, <a target="_blank" href="https://exploreaustin.org">Explore Austin</a>, <a target="_blank" href="https://www.flosports.tv/">FloSports</a>, <a target="_blank" href="https://snopes.com">Snopes</a>, <a target="_blank" href="https://workhelix.com">WorkHelix</a>, <a target="_blank" href="https://getnugg.com/">Nugg</a> <a target="_blank" href="https://coolhunting.com">COOL HUNTING</a>, <a target="_blank" href="https://invisionapp.com">InVision</a>, and a slew of other nice folks. Who's next?</h1>
   </section>
@@ -77,17 +119,37 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact lead">
     <h1 class="text-base font-bold mb-4 font-stretch-expanded font-semibold uppercase tracking-wider">Get in Touch</h1>
     <p class="text-2xl sm:text-4xl leading-tight font-bold mb-4 font-stretch-semi-expanded">You can find me on <a target="_blank" href="https://github.com/clarklab">Github</a>, <a target="_blank" href="https://x.com/clarklab">Twitter</a>, or email me at <a target="_blank" href="mailto:clark@superfun.games">clark@superfun.team</a>.</p>
   </section>
+
+  <div class="toggle-switch fixed bottom-5 left-1/2 -translate-x-1/2 z-10 p-2 rounded-full bg-black/20 dark:bg-white/20 w-32 cursor-pointer">
+    <div class="pip bg-white rounded-full p-2 inline-flex items-center justify-center relative left-0 transition-all duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="light size-6">
+        <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="dark hidden size-6 !text-black">
+        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
+      </svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ink hidden size-6">
+        <path fill-rule="evenodd" d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Zm4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clip-rule="evenodd" />
+      </svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="fun hidden size-6">
+        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 0 0-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634Zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 0 1-.189-.866c0-.298.059-.605.189-.866Zm2.023 6.828a.75.75 0 1 0-1.06-1.06 3.75 3.75 0 0 1-5.304 0 .75.75 0 0 0-1.06 1.06 5.25 5.25 0 0 0 7.424 0Z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </div>
 
   <div id="shade" class="fixed inset-0 z-1"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.dots.min.js"></script>
 <script>
-VANTA.DOTS({
+let vantaEffect = VANTA.DOTS({
   el: "#shade",
   mouseControls: true,
   touchControls: true,
@@ -105,6 +167,88 @@ VANTA.DOTS({
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    const toggleSwitch = document.querySelector('.toggle-switch');
+    const pip = document.querySelector('.pip');
+    const lightIcon = document.querySelector('svg.light');
+    const darkIcon = document.querySelector('svg.dark');
+    const inkIcon = document.querySelector('svg.ink');
+    const funIcon = document.querySelector('svg.fun');
+    const body = document.body;
+    const html = document.documentElement;
+
+    // Define the states
+    const states = ['light', 'dark', 'ink', 'fun'];
+    const positions = ['left-0', 'left-[1.5rem]', 'left-[3rem]', 'left-[4.5rem]'];
+    const icons = [lightIcon, darkIcon, inkIcon, funIcon];
+    const backgroundColors = [0xffffff, 0x000000, 0xd1d5dc, 0xff6467]; // light, dark, ink, fun
+
+    // Load saved state from localStorage, default to 0 (light)
+    let currentState = parseInt(localStorage.getItem('monaspace-theme') || '0');
+    
+    // Apply the saved state on page load
+    function applyState(state) {
+      // Hide all icons first
+      icons.forEach(icon => icon.classList.add('hidden'));
+      // Remove all position classes
+      positions.forEach(pos => pip.classList.remove(pos));
+      // Remove all state classes
+      states.forEach(st => {
+        body.classList.remove(st);
+        html.classList.remove(st);
+      });
+
+      // Apply current state
+      icons[state].classList.remove('hidden');
+      pip.classList.add(positions[state]);
+      body.classList.add(states[state]);
+      html.classList.add(states[state]);
+
+      // Update VANTA background color
+      if (vantaEffect) {
+        vantaEffect.setOptions({
+          backgroundColor: backgroundColors[state]
+        });
+      }
+    }
+
+    // Apply the initial state
+    applyState(currentState);
+
+    toggleSwitch.addEventListener('click', () => {
+      // Hide current icon
+      icons[currentState].classList.add('hidden');
+      
+      // Remove current position class from pip
+      pip.classList.remove(positions[currentState]);
+      
+      // Remove current state class from body and html
+      body.classList.remove(states[currentState]);
+      html.classList.remove(states[currentState]);
+
+      // Move to next state (loop back to 0 after 3)
+      currentState = (currentState + 1) % 4;
+      
+      // Save to localStorage
+      localStorage.setItem('monaspace-theme', currentState.toString());
+
+      // Show new icon
+      icons[currentState].classList.remove('hidden');
+      
+      // Add new position class to pip
+      pip.classList.add(positions[currentState]);
+      
+      // Add new state class to body and html
+      body.classList.add(states[currentState]);
+      html.classList.add(states[currentState]);
+
+      // Update VANTA background color
+      if (vantaEffect) {
+        vantaEffect.setOptions({
+          backgroundColor: backgroundColors[currentState]
+        });
+      }
+    });
+
     const allLinks = document.querySelectorAll('a');
 
     allLinks.forEach(link => {
