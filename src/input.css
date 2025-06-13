@@ -82,6 +82,10 @@ a.not-hover {
   @apply border-gray-800
 }
 
+.ink .shade{
+  @apply hidden
+}
+
 .fun {
   @apply radon
 }

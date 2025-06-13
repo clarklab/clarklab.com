@@ -561,6 +561,9 @@ a.not-hover {
 .ink .border-amber-400 {
   border-color: var(--color-gray-800);
 }
+.ink .shade {
+  display: none;
+}
 .fun {
   font-family: "Monaspace Radon", sans-serif;
   font-optical-sizing: auto;
