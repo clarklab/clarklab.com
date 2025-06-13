@@ -207,6 +207,9 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
+  .bottom-2 {
+    bottom: calc(var(--spacing) * 2);
+  }
   .bottom-8 {
     bottom: calc(var(--spacing) * 8);
   }
