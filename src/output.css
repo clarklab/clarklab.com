@@ -186,6 +186,12 @@
   }
 }
 @layer utilities {
+  .pointer-events-auto {
+    pointer-events: auto;
+  }
+  .pointer-events-none {
+    pointer-events: none;
+  }
   .visible {
     visibility: visible;
   }
@@ -201,8 +207,8 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .bottom-5 {
-    bottom: calc(var(--spacing) * 5);
+  .bottom-8 {
+    bottom: calc(var(--spacing) * 8);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -252,6 +258,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
@@ -288,6 +297,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -459,6 +471,11 @@
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
+  .md\:mt-16 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 16);
+    }
+  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -534,6 +551,12 @@ a.not-hover {
 .dark .border-amber-400 {
   border-color: var(--color-yellow-400);
 }
+.dark a.not-hover {
+  text-decoration-color: color-mix(in srgb, oklch(85.2% 0.199 91.936) 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    text-decoration-color: color-mix(in oklab, var(--color-yellow-400) 20%, transparent);
+  }
+}
 .ink {
   font-family: "Doto", sans-serif;
   font-optical-sizing: auto;
@@ -561,6 +584,9 @@ a.not-hover {
 .ink .border-amber-400 {
   border-color: var(--color-gray-800);
 }
+.ink a.not-hover {
+  text-decoration-style: dashed;
+}
 .ink .shade {
   display: none;
 }
@@ -577,6 +603,12 @@ a.not-hover {
 }
 .fun .border-amber-400 {
   border-color: var(--color-red-800);
+}
+.fun a.not-hover {
+  text-decoration-color: color-mix(in srgb, #fff 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    text-decoration-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  }
 }
 @property --tw-translate-x {
   syntax: "*";
